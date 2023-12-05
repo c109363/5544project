@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Link to CSS file -->
+    <!-- Link to Chart.js or other charting library -->
+</head>
+<body>
+    <div id="main-container">
+        <div id="image-container">
+            <!-- Thumbnails will be loaded here by JavaScript -->
+        </div>
+        <div id="right-container">
+            <p>Image1</p>
+            <div id="image-area-1" class="selected-image">
+                <!-- First selected image will be displayed here -->
+            </div>
+            <p>Image2</p>
+            <div id="image-area-2" class="selected-image">
+                <!-- Second selected image will be displayed here -->
+            </div>
+        </div>
+
+        <div id="left-container">
+            <p>Subjective Attributs</p>
+            <div id="chart1" class="chart">
+                <!-- First selected image will be displayed here -->
+            </div>
+            <p>Objective Attributs</p>
+            <div id="chart2" class="chart">
+                <!-- Second selected image will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

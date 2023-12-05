@@ -1,0 +1,106 @@
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#main-container {
+    display: flex;
+    height: 100%;
+}
+
+#image-container {
+    flex: 1; /* Assign 1 part of the flex space to this container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex; /* Enable flexbox for internal elements */
+    flex-wrap: wrap; /* Allow thumbnails to wrap within the container */
+    align-content: flex-start; /* Align thumbnails to the top of the container */
+    padding: 10px;
+    gap: 10px; /* Add some space between children */
+    box-sizing: border-box;
+}
+
+.thumbnail {
+    flex: 0 1 20px; /* Thumbnails do not grow, may shrink, and start at 200px width */
+    height: 60px;
+}
+
+.thumbnail.selected {
+    border: 4px solid rgb(255, 0, 60); /* 设置选中时的边框颜色 */
+    /* 如果需要保持之前的圆角和阴影样式，以下属性应与之前的设置保持一致 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(147, 0, 0, 0.2);
+}
+
+
+#right-container {
+    flex: 2;  /* 占据1份额外空间 */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#left-container {
+    flex: 3;  /* 占据1.5份额外空间 */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.images-wrapper {
+    display: flex;
+    /* 如果您想要有间隙，可以添加gap属性 */
+    gap: 10px;
+}
+
+/* 新建一个包裹图表区域的容器样式 */
+.charts-wrapper {
+    display: flex;
+    /* 如果您想要有间隙，可以添加gap属性 */
+    gap: 10px;
+}
+
+.selected-image {
+    width: 100%;   /* 或特定的像素值 */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc; /* Add border for visibility */
+
+}
+
+.chart {
+    width: 100%;   /* 或特定的像素值 */
+    height: 100%;
+    border: 1px solid #ccc; /* Example border */
+}
+
+
+
+#image-container, #image-area-1, #image-area-2, #chart1, #chart2 {
+    border-radius: 10px; /* 设置圆角的大小，可以根据需要调整 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* 添加阴影，这里的值也可以根据需要调整 */
+    /* ... 其它样式属性 ... */
+}
+
+/* 如果#image-container内部的.thumbnail也需要圆角和阴影 */
+.thumbnail {
+    border-radius: 10px; /* 与容器保持一致 */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* 与容器保持一致 */
+    /* ... 其它样式属性 ... */
+}
+
+p {
+    /* 文本大小 */
+    font-size: 16px; /* 或者使用其他单位，如em, rem */
+    /* 居中对齐 */
+    text-align: center;
+    /* 边缘（内边距和外边距） */
+    margin: 1px; /* 外边距 */
+    padding: 1px; /* 内边距 */
+}
