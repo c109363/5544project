@@ -23,7 +23,7 @@ body, html {
 
 .thumbnail {
     flex: 0 1 20px; /* Thumbnails do not grow, may shrink, and start at 200px width */
-    height: 60px;
+    height: 50px;
 }
 
 .thumbnail.selected {
